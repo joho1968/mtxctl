@@ -42,7 +42,7 @@ if ( !file_exists( $configPath ) ) {
     }
 }
 
-$version = '0.90.0';
+$version = '0.95.0';
 
 $app = new Application( 'mtxctl', $version );
 $app->setAutoExit( false );

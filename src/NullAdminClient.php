@@ -64,7 +64,7 @@ final class NullAdminClient implements SynapseAdminClientInterface
         $this->fail();
     }
 
-    public function listRooms( int $limit = 100, int $from = 0 ): array
+    public function listRooms( int $limit = 100, int $from = 0, ?string $searchTerm = null ): array
     {
         $this->fail();
     }
@@ -80,6 +80,41 @@ final class NullAdminClient implements SynapseAdminClientInterface
     }
 
     public function makeRoomAdmin( string $roomId, string $userId ): void
+    {
+        $this->fail();
+    }
+
+    public function whoami(): string
+    {
+        $this->fail();
+    }
+
+    public function forceJoinRoom( string $roomId, string $userId ): void
+    {
+        $this->fail();
+    }
+
+    public function leaveRoom( string $roomId ): void
+    {
+        $this->fail();
+    }
+
+    public function kickRoomMember( string $roomId, string $userId, string $reason = '' ): void
+    {
+        $this->fail();
+    }
+
+    public function setRoomPowerLevel( string $roomId, string $userId, int $level ): void
+    {
+        $this->fail();
+    }
+
+    public function sendStateEvent( string $roomId, string $eventType, string $stateKey, array $content ): void
+    {
+        $this->fail();
+    }
+
+    public function getStateEvent( string $roomId, string $eventType, string $stateKey = '' ): ?array
     {
         $this->fail();
     }

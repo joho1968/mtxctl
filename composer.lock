@@ -8,11 +8,11 @@
     "packages": [
         {
             "name": "joho/matrix-php",
-            "version": "0.90.1",
+            "version": "0.92.0",
             "dist": {
                 "type": "path",
                 "url": "../matrix-php",
-                "reference": "9813ff833892a8460e4d9833308ffbc9fe85cade"
+                "reference": "5677c3920a6326d2b4770d2639a71fb873d99103"
             },
             "require": {
                 "php": ">=8.4"

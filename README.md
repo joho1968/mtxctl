@@ -83,10 +83,19 @@ Both must be quoted in most shells — `#` is a comment and `!` triggers history
 expansion, so the shell strips them before the argument reaches mtxctl.
 
 ```bash
-room list [--limit=N] [--from=N]
+room list [--limit=N] [--from=N] [--search=term] [--retention]
 room show <room>
 room members <room>
-room make-admin <room> --user <@user:server>   # works even if user is not a member
+room make-admin <room> --user <@user:server>     # works even if user is not a member
+room kick <room> --user <@user:server> [--reason="..."] [--confirm]
+room power <room> --user <@user:server>          # show current power level
+room power <room> --user <@user:server> --level N  # set power level (0=member, 50=mod, 100=admin)
+room retention <room>                            # show retention for one room
+room retention <room> --days=N [--confirm]       # set retention on one room
+room retention <room> --clear [--confirm]        # clear retention on one room
+room retention --search=term                     # show retention for all matching rooms
+room retention --search=term --days=N [--confirm]  # bulk set (auto-promotes if needed)
+room retention --search=term --clear [--confirm]   # bulk clear
 room tombstone <old-room> <new-room> [--body="..."] [--confirm]
 room delete <room> [--no-purge] [--confirm]
 ```
