@@ -1,0 +1,25 @@
+{
+    "name": "joho/mtxctl",
+    "description": "Matrix/Synapse admin CLI tool",
+    "type": "project",
+    "license": "AGPL-3.0-or-later",
+    "require": {
+        "php": ">=8.4",
+        "joho/matrix-php": "*",
+        "symfony/console": "^7.0"
+    },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../matrix-php",
+            "options": { "symlink": false }
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Joho\\Mtxctl\\": "src/"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

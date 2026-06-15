@@ -1,0 +1,30 @@
+# Deploy manifest — explicit include list.
+# Lines starting with # are comments. Empty lines are ignored.
+# Lines ending with / are copied recursively.
+
+bin/mtxctl.php
+
+src/Config.php
+src/NullAdminClient.php
+src/Command/UserCommand.php
+src/Command/RoomCommand.php
+src/Command/MediaCommand.php
+src/Command/TokenCommand.php
+src/Command/FederationCommand.php
+src/Command/ServerCommand.php
+src/Command/VersionCommand.php
+
+config/config.example.php
+
+deploy/manifest.txt
+deploy/deploy.php
+
+# vendor/ is not listed; deploy.php runs `composer install --no-dev`
+# in the staging area to produce a clean vendor tree.
+
+composer.json
+composer.lock
+
+CHANGELOG.md
+LICENSE
+README.md
