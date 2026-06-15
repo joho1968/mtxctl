@@ -14,11 +14,15 @@ Built on [matrix-php](https://codeberg.org/joho1968/matrix-php) and [symfony/con
 ## Installation
 
 ```bash
-git clone <repo> && cd mtxctl
+git clone https://codeberg.org/joho1968/matrix-php ../matrix-php
+git clone https://codeberg.org/joho1968/mtxctl && cd mtxctl
 php8.4 /path/to/composer install --no-dev
 cp config/config.example.php config/config.php
 # edit config/config.php
 ```
+
+`matrix-php` must be a sibling directory (`../matrix-php`) — it is a path
+dependency and is not bundled in this repository.
 
 Or deploy to a target directory or tarball:
 
